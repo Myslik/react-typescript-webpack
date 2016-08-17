@@ -5,19 +5,18 @@
 @grid-header-bg: #fafafa;
 @grid-active: #d9edf7;
 @grid-cell-padding: 5px;
-
 .border-box() {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 .ellipsis() {
-    white-space: nowrap;
-    overflow: hidden;
-    -ms-text-overflow: ellipsis;
-    -o-text-overflow: ellipsis;
-    text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	-ms-text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
 }
 
 .cell() {
@@ -42,77 +41,65 @@
 }
 
 .react-grid {
-    background-color: @grid-bg;
+	background-color: @grid-bg;
 	border: 1px solid @grid-border-color;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 11px;
-    position: relative;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 11px;
+	position: relative;
 	height: 100%;
-
 	.scrollable {
 		overflow: auto;
 		position: relative;
 		height: 100%;
 	}
-
 	.inner {
 		background-color: transparent;
 		display: table;
 		width: 100%;
 	}
-	
 	.header,
-    .row,
-    .body {
-        white-space: nowrap;
-        display: block;
+	.row,
+	.body {
+		white-space: nowrap;
+		display: block;
 		position: relative;
-    }
-	
+	}
 	.header {
 		background-color: @grid-header-bg;
-        border-bottom: 1px solid @grid-border-color;
+		border-bottom: 1px solid @grid-border-color;
 		color: @grid-header-color;
-        text-transform: uppercase;
-        z-index: 2;
-    }
-
-    .row {
+		text-transform: uppercase;
+		z-index: 2;
+	}
+	.row {
 		background-color: @grid-bg;
-        border-bottom: 1px solid @grid-border-color;
-
-        &:last-child {
-            border-bottom: none;
-        }
-				
+		border-bottom: 1px solid @grid-border-color;
+		&:last-child {
+			border-bottom: none;
+		}
 		&.active {
 			background-color: @grid-active;
 		}
 	}
-	
 	.header-cell {
-        .header-cell();
+		.header-cell();
 		.ellipsis();
 		padding: @grid-cell-padding;
 		cursor: default;
-
-        &:last-child {
-            border-right: none;
-        }
-
+		&:last-child {
+			border-right: none;
+		}
 		.title {
 			white-space: nowrap;
-    		overflow: hidden;
-    		text-overflow: ellipsis;
-    		float: left;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			float: left;
 		}
 	}
-	
 	.cell {
-        .row-cell();
-
-        &:last-child {
-            border-right: none;
-        }
+		.row-cell();
+		&:last-child {
+			border-right: none;
+		}
 	}
 }
