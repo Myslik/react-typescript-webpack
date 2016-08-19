@@ -2,6 +2,9 @@
   "name": "react-typescript-webpack",
   "version": "0.0.1",
   "private": true,
+  "scripts": {
+    "start": "node .\\node_modules\\webpack-dev-server\\bin\\webpack-dev-server.js --inline"
+  },
   "dependencies": {
     "es6-promise": "^3.2.1",
     "react": "^15.3.0",
